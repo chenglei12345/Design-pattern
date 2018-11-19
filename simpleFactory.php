@@ -2,9 +2,7 @@
 
 /**
  * 简单工厂模式
- * 意图：定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。
- * 何时使用：我们明确地计划不同条件下创建不同实例时。
- * 
+ * 又叫做静态工厂方法模式，是通过一个静态方法创建对象的
  */
 
 /**
@@ -17,7 +15,7 @@ interface Vehicle{
 /**
  * 定义继承类
  */
-class Plan implements Vehicle{
+class Plane implements Vehicle{
   public $name = '飞机';
   public function drive(){
     echo $this->name.'在天上飞';
@@ -42,6 +40,7 @@ class Car implements Vehicle{
  * 定义工厂类,专门用于类的创建
  */
 class VehicleFactory{
+  // 简单工厂里的静态方法
   public static function build($className = null){
     // 首字母大写
     $className = ucfirst($className);
