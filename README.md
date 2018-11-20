@@ -1,2 +1,3 @@
-# Design-pattern
-php 实现的设计模系列
+# php-design-pattern
+php 实现的设计模式系列
+  
